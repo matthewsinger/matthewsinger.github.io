@@ -1,0 +1,136 @@
+<!doctype HTML>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+    displayMath: [ ["$$","$$"], 
+                   ["\\[","\\]"], 
+                   ["\\begin{equation}","\\end{equation}"], 
+                   ["\\begin{equation*}","\\end{equation*}"] ],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|JavaHighlightBlock|JavaHighlight"
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    webFont: "Asana-Math",
+    preferredFont: "Asana-Math",
+    imageFont: null,
+    mtexFontInherit: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="codemirror.js"></script>
+<script src="python.js"></script>
+<script src="runmode.js"></script>
+<script src="setup-page.js"></script>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=0.8"/><title>General Course Information</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-style.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-racket.css" title="default"/><link rel="stylesheet" type="text/css" href="extra-styles.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">&#9660;</a></td><td></td><td><a href="index.html" class="tocviewlink" data-pltdoc="x">Commonwealth School CS2
+<br/>
+Introduction to Class-<wbr></wbr>based Program Design</a></td></tr></table></div><div class="tocviewsublisttop" style="display: block;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="" class="tocviewselflink" data-pltdoc="x">General Course Information</a></td></tr><tr><td align="right"></td><td><a href="Lectures.html" class="tocviewlink" data-pltdoc="x">Lectures</a></td></tr><tr><td align="right"></td><td><a href="Assignments.html" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="Documentation.html" class="tocviewlink" data-pltdoc="x">Documentation</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">&#9658;</a></td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">General Course Information</a></td></tr></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="#%28part._.Classroom_.Participation%29" class="tocviewlink" data-pltdoc="x">Classroom Participation</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.The_.Big_.Myth%29" class="tocviewlink" data-pltdoc="x">The Big Myth</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Laptops_in_.Class%29" class="tocviewlink" data-pltdoc="x">Laptops in Class</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Programming_.Environment%29" class="tocviewlink" data-pltdoc="x">Programming Environment</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Communications%29" class="tocviewlink" data-pltdoc="x">Communications</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.The_.Dangers_of_.Copy_.Pasting%29" class="tocviewlink" data-pltdoc="x">The Dangers of Copy/<span class="mywbr"> &nbsp;</span>Pasting</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Peer-to-.Peer_.Collaboration%29" class="tocviewlink" data-pltdoc="x">Peer-<wbr></wbr>to-<wbr></wbr>Peer Collaboration</a></td></tr><tr><td align="right"></td><td><a href="#%28part._gen-assgn%29" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Labs_policy%29" class="tocviewlink" data-pltdoc="x">Labs policy</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.The_.A.P_.Exam%29" class="tocviewlink" data-pltdoc="x">The AP Exam</a></td></tr><tr><td align="right"></td><td><a href="#%28part._.Grades%29" class="tocviewlink" data-pltdoc="x">Grades</a></td></tr></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Classroom_.Participation%29" class="tocsubseclink" data-pltdoc="x">Classroom Participation</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.The_.Big_.Myth%29" class="tocsubseclink" data-pltdoc="x">The Big Myth</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Laptops_in_.Class%29" class="tocsubseclink" data-pltdoc="x">Laptops in Class</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Programming_.Environment%29" class="tocsubseclink" data-pltdoc="x">Programming Environment</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Communications%29" class="tocsubseclink" data-pltdoc="x">Communications</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.The_.Dangers_of_.Copy_.Pasting%29" class="tocsubseclink" data-pltdoc="x">The Dangers of Copy/<span class="mywbr"> &nbsp;</span>Pasting</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Peer-to-.Peer_.Collaboration%29" class="tocsubseclink" data-pltdoc="x">Peer-<wbr></wbr>to-<wbr></wbr>Peer Collaboration</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._gen-assgn%29" class="tocsubseclink" data-pltdoc="x">Assignments</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Labs_policy%29" class="tocsubseclink" data-pltdoc="x">Labs policy</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.The_.A.P_.Exam%29" class="tocsubseclink" data-pltdoc="x">The AP Exam</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Grades%29" class="tocsubseclink" data-pltdoc="x">Grades</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><div class="versionbox"><span class="version">7.3</span></div><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="index.html" title="backward to &quot;Commonwealth School CS2
+
+
+Introduction to Class-based Program Design&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="index.html" title="up to &quot;Commonwealth School CS2
+
+
+Introduction to Class-based Program Design&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Lectures.html" title="forward to &quot;Lectures&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div><h3><a name="(part._.General_.Course_.Information)"></a>General Course Information</h3><h4><a name="(part._.Classroom_.Participation)"></a>Classroom Participation</h4><p>There are two essential components to this course: the classroom, and the assignments.
+The classroom provides us an opportunity to explore new topics and ideas together,
+generate discussion, and learn from each other. As such, classroom participation is
+very much encouraged, and lectures will be structured in a Q&amp;A style (with questions
+coming from both directions!).</p><p>As such, please ask the questions you have and don&rsquo;t be afraid to give answers
+you aren&rsquo;t totally sure of. If you&rsquo;re unsure of a topic, the likelihood is
+incredibly high so is one of your classmates, so speaking up will not just
+help you, but also your peers. Also, incorrect answers can be more instructive
+than correct ones, and often lead to great discussions! So long as you
+are being thoughtful and respectful to everyone in class,
+you cannot go wrong participating.</p><h4><a name="(part._.The_.Big_.Myth)"></a>The Big Myth</h4><p><div class="SIntrapara">There is a myth surrounding computer science, and especially that of the computer
+scientist or programmer. The myth espouses that:
+</div><div class="SIntrapara"><ul><li><p>Programmers must dedicate all
+of their time to programming to master it.</p></li><li><p>To err is evidence of one&rsquo;s
+inability to be a worthwhile programmer.</p></li><li><p>One must know all there is to
+know about computers to be of any use when writing code.</p></li></ul></div></p><p>These attitudes  exist due to a general ignorance and some people&rsquo;s desire to keep a garden
+wall around who has access to becoming a computer scientist. They are not only harmful, but
+categorically and fundamentally false:</p><ul><li><p>As you will regularly see reflected
+in the news and in the core beliefs at Commonwealth, an interdisciplinary
+approach to learning and life is absolutely necessary to achieve worthwhile accomplishments
+with computer science.</p></li><li><p>Every single programmer has produced more bugs than they could
+possibly recall. If anyone claims otherwise, they are simply lying. Especially in a classroom
+setting, making mistakes while programming is first and foremost an opportunity to learn.</p></li><li><p>No one knows everything about computers; in fact, no one can. The field has grown exponentially
+over the past century and a half, and the wealth of information is vast and ranges over many topics.
+If someone had to understand computers entirely to program, no software would ever be made!</p></li></ul><p>I outline and debunk this myth in the hope that if you are feeling nervous about your ability
+to succeed in CS at Commonwealth, this assuages your worries. Computer science is just
+like any other field worth studying: difficult but doable!</p><h4><a name="(part._.Laptops_in_.Class)"></a>Laptops in Class</h4><p>This may come as a surprise given this is a computer science course,
+but laptops (and other digital devices, unless otherwise specified by an
+accommodation) are not allowed in class. Lecture code will be posted to Google Classroom
+after class, and lecture notes which class content is based off of will be
+made available.</p><p>The purpose of class is to learn how to think about programming; it is very hard to think
+and copy down code at the same time (try out <a href="http://www.learningscientists.org/blog/2017/7/28-1">the
+demonstration</a> here on the costs of task switching, which is commonly called multitasking).
+As far as learning syntax, there will be plenty of examples to refer to between lecture code and lecture notes.
+Also, given that you are a student in CS2, you already know that the underlying concepts of programming
+are much more essential than the syntax by which they are represented, and that repeated programming
+(via assignments) is the best way to learn and internalize syntax.</p><p>The exception to the laptop policy is for when we will install Eclipse together on the second day of class,
+as outlined directly below.</p><h4><a name="(part._.Programming_.Environment)"></a>Programming Environment</h4><p>The IDE (integrated development environment) installed on the school
+computers and the one you should use is the Eclipse IDE. The second
+day of class will be dedicated to ensuring the installation and proper functioning of Eclipse
+on your laptops. Note that we use a specific version of Java to support our libraries,
+so you should wait to install Java and Eclipse until class. If you do not have
+a laptop, you should look on with a peer while we install Eclipse,
+and detailed instructions will be given for at-home installation.</p><h4><a name="(part._.Communications)"></a>Communications</h4><p>I can be reached at my school email, and should generally respond within 24 hours (or on Monday if sent Friday-Sunday).
+My office is in 3-04, and I will usually be there if not in class, or in the computer lab (2B).
+Official lab periods are Tuesdays periods 5 and 7, Wednesdays period 3, Thursdays period 7, and Fridays period 1;
+if you have a free period, feel free to drop by.</p><p>If you are sick or know of an upcoming abscence or conflict with an assignment, you should contact me ASAP to work
+out the details. As far as help with homeworks, see the lab policy below.</p><h4><a name="(part._.The_.Dangers_of_.Copy_.Pasting)"></a>The Dangers of Copy/Pasting</h4><p>There are two kinds of harmful copy/pasting. The first is copying part of your own code
+to other parts of your code, as this a sign you should likely be abstracting instead of duplicating
+your code. The second, much more serious kind, is copying someone else&rsquo;s code into your own; in this course,
+that is considered cheating.</p><p>Cheating in CS2 is a high risk/low reward activity. It is low reward because we have many assignments,
+and one partially completed or incompleted assignment will not tank your grade. It is high risk because
+there is a very small student population, so I will have a very good idea as to what your code usually looks like.
+If you copy from the internet, I will be able to tell it isn&rsquo;t yours, and worse, if you copy from your peer,
+I will be able to tell who you copied it from.</p><p>Cheating is also low reward because not completing an assignment is a sign that you don&rsquo;t grasp the material,
+are struggling with your workload, or both. In any of these cases, talking to myself and/or your advisor
+as soon as possible is by far the most productive step you can take. Be proactive about your education;
+make decisions that will most greatly impact your longterm understanding instead of taking
+shortcuts. This is one of the best things you can do for yourself as not only a student, but a person,
+and learning these habits now is one of the best ways to prepare yourself for life after Commonwealth.</p><h4><a name="(part._.Peer-to-.Peer_.Collaboration)"></a>Peer-to-Peer Collaboration</h4><p>While copy/pasting from your classmates is forbidden, they can be very helpful in the learning process.
+Discussing course concepts and assignments at a high level is both fruitful and encouraged,
+and if I am not available, your peers are your best allies in becoming developed programmers.
+As a general rule of thumb, if you&rsquo;re collaborating together on a whiteboard and not spelling out
+answers directly, you are likely not committing any academic integrity violations.</p><h4><a name="(part._gen-assgn)"></a>Assignments</h4><p>As per the Student Bill of Rights, while homeworks will be posted here, they will be linked to from Google
+Classroom. Assignment submissions should consist of one .java file, or as our programs become larger,
+one .zip file containing .java files. Assignments should reflect the code quality as demonstrated
+in class, especially in regards to clarity, documentation, and test coverage.</p><p>As per school policy, assignments should take 45-60 minutes. If an assignment is posted multiple
+classes out (such as for complex games), no other assignments will be given in the interim to allow for the time
+required to complete it. Practice-oriented assignments will usually be assigned Monday and due Wednesday,
+and more intricate assignments will usually be assigned Wednesday and due Monday.</p><p>Feedback will be given via Google Classroom in (what I hope will be) a regular schedule with a fairly quick
+turnaround, to be organically discovered early during the school year. Feedback will consist of a letter grade
+and a comment pertaining to the strengths of the submission and areas needing improvement, possibly with references
+to specific lines of code.</p><p>Late assignments will be penalized at a whole letter grade for one day, two letter grades for two, and not accepted after that.</p><h4><a name="(part._.Labs_policy)"></a>Labs policy</h4><p>Lab periods are an excellent opportunity to work on homework, ask clarifying questions, and recieve help debugging.
+There are usually two sources of questions from student programmers, one being understanding the task at hand,
+and the other having to do with their specific implementation of it.</p><p>If you have questions about the content
+of the assignment, be sure you&rsquo;ve read the entire assignment first, as your question may be answered later.
+A good technique for understanding technical writing, much like dense prose, is to slow down your pace, and
+possibly read it aloud to yourself. Be sure to try both of these approaches before asking clarifying questions,
+as answering your own questions will better enable you to do so in the future.</p><p>If you find yourself stuck when programming, taking time to formulate your question is an incredibly productive step.
+Think carefully about what you&rsquo;ve done (what classes have/haven&rsquo;t you designed, what methods have/haven&rsquo;t
+you defined, etc.) and how to articulate it, so the person helping you can quickly understand where your question is coming from
+and help you as best as possible. If this seems daunting, don&rsquo;t worry; you will become better at this with practice.</p><p>As with groking the assignment, an essential step in debugging or progressing in writing code when you&rsquo;re stuck is to
+first try and un-stuck yourself. A skill all programmers must learn is balancing the tension between answering the question
+on your own, and not wasting too much time on a problem you cannot solve. Never give up immediately, but 5 minutes spent totally
+stuck is a sign it&rsquo;s time to step away and come back to a problem later, or ask for help.</p><h4><a name="(part._.The_.A.P_.Exam)"></a>The AP Exam</h4><p>As stated elsewhere on the site, this course will prepare you for the AP Computer Science A exam. While the course is not geared
+towards the exam, students at Commonwealth have the distinct advantage of taking two years of programming before taking the exam,
+which is not usually the case. As test-time approaches, we will ensure you can map the skills covered in this class onto the exam,
+largely through practice testing. Note that the order this course goes in differs wildly from most AP courses, so I recommend
+talking to me before trying out practice tests early if you are so inclined, as you may find yourself misguidedly discouraged
+by the material you can&rsquo;t yet answer.</p><h4><a name="(part._.Grades)"></a>Grades</h4><p>Grades will be calculated based on class participation, assignment grades, and projects (which are effectively just large
+assignments). Some assignments will be weighted more highly
+than others. As the year progresses, if further transparency is required, we can begin to define this more exactly.</p><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="index.html" title="backward to &quot;Commonwealth School CS2
+
+
+Introduction to Class-based Program Design&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="index.html" title="up to &quot;Commonwealth School CS2
+
+
+Introduction to Class-based Program Design&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Lectures.html" title="forward to &quot;Lectures&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>
