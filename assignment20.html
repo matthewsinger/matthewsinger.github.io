@@ -37,12 +37,11 @@ you to make some examples of data in an examples class.</p><p><div class="SIntra
 the same color. The player starts in the upper left corner and by clicking various colors they
 can change the color of that corner which can increase the size of the area they control.</p><p>An example of this game is available for you to play
 <a href="http://unixpapa.com/floodit/">here</a>.
-It will be useful to think of the game
-as having two states, one which allows you to click on a tile and begin flooding,
-and the other which is in the process of flooding.</p><h5><a name="(part._.Requirements)"></a>Requirements</h5><ul><li><p>Your game should take in a grid size and the number of colors that will be used.
+The game essentially has two states, one which allows you to click on a tile to begin flooding,
+and another which is in the process of flooding.</p><h5><a name="(part._.Requirements)"></a>Requirements</h5><ul><li><p>Your game should take in a grid size and the number of colors that will be used.
 Use these numbers to produce your initial world.</p></li><li><p>All cells should be initialized with a random color.</p></li><li><p>If a player clicks on a square that is the same color as the area they control, no change
 should occur.</p></li><li><p>If a player clicks on a square that is distinct from the color of the area they control, this
-produces the "waterfall" effect.</p></li></ul><h5><a name="(part._.Hints)"></a>Hints</h5><ul><li><p>You may assume the number of colors will not exceed 9.</p></li><li><p>When you are in the process of flooding, your on-tick method should flood only the
+produces the "waterfall" effect.</p></li></ul><h5><a name="(part._.Hints)"></a>Hints</h5><ul><li><p>You may assume the number of colors will not exceed 8.</p></li><li><p>When you are in the process of flooding, your on-tick method should flood only the
 squares adjacent to those you have already flooded. This will produce the "waterfall"
 effect shown in the game.</p></li><li><p>Once one round of flooding is completed, consider all cells unflooded.</p></li><li><p>Flooding can happen in any of the cardinal directions, not just right and down.</p></li><li><p>First, design your game&rsquo;s constructor. Second, design and verify the accuracy of your graphics.
 Save the actual gameplay for last.</p></li><li><p>You are welcome to enhance the game outside of the requirements in this assignment, but only do so after you have
