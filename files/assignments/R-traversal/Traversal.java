@@ -64,11 +64,15 @@ abstract class DFT<X> implements DFTIterator<X> {
   }
 
   // check that there is a next element
-  public void validateNext() {
+  public X next() {
     if (!this.hasNext()) {
       throw new NoSuchElementException();
     }
+    return this.getNext();
   }
+
+  // actually get the next
+  abstract X getNext();
 }
 
 class InOrder<X> extends DFT<X> {
