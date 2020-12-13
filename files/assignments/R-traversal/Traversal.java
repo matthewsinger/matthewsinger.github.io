@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 
+// a non-empty binary tree
 abstract class BT<X> {
   X value;
 
