@@ -81,6 +81,10 @@ class InOrder<X> extends DFT<X> {
     super(bt);
   }
 
+  public DFTIterator<X> iterate(BT<X> x) {
+    return new InOrder<X>(x);
+  }
+
 }
 
 class PreOrder<X> extends DFT<X> {
@@ -89,12 +93,20 @@ class PreOrder<X> extends DFT<X> {
     super(bt);
   }
 
+  public DFTIterator<X> iterate(BT<X> x) {
+    return new PreOrder<X>(x);
+  }
+
 }
 
 class PostOrder<X> extends DFT<X> {
 
   PostOrder(BT<X> bt) {
     super(bt);
+  }
+
+  public DFTIterator<X> iterate(BT<X> x) {
+    return new PostOrder<X>(x);
   }
 }
 
