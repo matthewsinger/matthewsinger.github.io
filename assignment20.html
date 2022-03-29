@@ -1,0 +1,197 @@
+<!doctype HTML>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+    displayMath: [ ["$$","$$"], 
+                   ["\\[","\\]"], 
+                   ["\\begin{equation}","\\end{equation}"], 
+                   ["\\begin{equation*}","\\end{equation*}"] ],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|JavaHighlightBlock|JavaHighlight"
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    webFont: "Asana-Math",
+    preferredFont: "Asana-Math",
+    imageFont: null,
+    mtexFontInherit: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="codemirror.js"></script>
+<script src="python.js"></script>
+<script src="runmode.js"></script>
+<script src="setup-page.js"></script>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=0.8"/><title>Assignment 20: Chess</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="racket.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-style.css" title="default"/><link rel="stylesheet" type="text/css" href="manual-racket.css" title="default"/><link rel="stylesheet" type="text/css" href="extra-styles.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">&#9658;</a></td><td></td><td><a href="index.html" class="tocviewlink" data-pltdoc="x">Commonwealth School CS2
+<br/>
+Introduction to Class-<wbr></wbr>based Program Design</a></td></tr></table></div><div class="tocviewsublisttop" style="display: none;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="General_Course_Information.html" class="tocviewlink" data-pltdoc="x">General Course Information</a></td></tr><tr><td align="right"></td><td><a href="Assignments.html" class="tocviewselflink" data-pltdoc="x">Assignments</a></td></tr><tr><td align="right"></td><td><a href="Documentation.html" class="tocviewlink" data-pltdoc="x">Documentation</a></td></tr><tr><td align="right"></td><td><a href="Installation___New_Project_Instructions.html" class="tocviewlink" data-pltdoc="x">Installation &amp; New Project Instructions</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">&#9660;</a></td><td></td><td><a href="Assignments.html" class="tocviewlink" data-pltdoc="x">Assignments</a></td></tr></table><div class="tocviewsublist" style="display: block;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="assignment1.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 1:</span> Designing complex data</a></td></tr><tr><td align="right"></td><td><a href="assignment2.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 2:</span> Delegation</a></td></tr><tr><td align="right"></td><td><a href="assignment3.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 3:</span> Tree-<wbr></wbr>Shaped Data</a></td></tr><tr><td align="right"></td><td><a href="assignment4.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 4:</span> Accumulators</a></td></tr><tr><td align="right"></td><td><a href="assignment5.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 5:</span> Abstracting over Data Definitions</a></td></tr><tr><td align="right"></td><td><a href="assignment6.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 6:</span> Customizing Constructors</a></td></tr><tr><td align="right"></td><td><a href="assignment7.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 7:</span> Mastermind</a></td></tr><tr><td align="right"></td><td><a href="assignment8.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 8:</span> Abstraction</a></td></tr><tr><td align="right"></td><td><a href="assignment9.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 9:</span> Generics</a></td></tr><tr><td align="right"></td><td><a href="assignment10.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 10:</span> Fibonacci</a></td></tr><tr><td align="right"></td><td><a href="assignment11.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 11:</span> Course Registration</a></td></tr><tr><td align="right"></td><td><a href="assignment12.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 12:</span> Who&rsquo;s On Deque?</a></td></tr><tr><td align="right"></td><td><a href="assignment13.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 13:</span> Huffman Coding</a></td></tr><tr><td align="right"></td><td><a href="assignment14.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 14:</span> Traversal</a></td></tr><tr><td align="right"></td><td><a href="assignment15.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 15:</span> Arrays</a></td></tr><tr><td align="right"></td><td><a href="assignment16.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 16:</span> Bloom Filters</a></td></tr><tr><td align="right"></td><td><a href="assignment17.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 17:</span> Optionals</a></td></tr><tr><td align="right"></td><td><a href="assignment18.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 18:</span> Streams</a></td></tr><tr><td align="right"></td><td><a href="assignment19.html" class="tocviewlink" data-pltdoc="x"><span class="AssignmentNum">Assignment 19:</span> Minesweeper</a></td></tr><tr><td align="right"></td><td><a href="" class="tocviewselflink" data-pltdoc="x"><span class="AssignmentNum">Assignment 20:</span> Chess</a></td></tr></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_2&quot;);">&#9658;</a></td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x"><span class="AssignmentNum">Assignment 20:</span> Chess</a></td></tr></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_2"><table cellspacing="0" cellpadding="0"><tr><td align="right"></td><td><a href="#%28part._.Chess%29" class="tocviewlink" data-pltdoc="x">Chess</a></td></tr><tr><td align="right">20.1&nbsp;</td><td><a href="#%28part._.The_.Rules_of_.Chess%29" class="tocviewlink" data-pltdoc="x">The Rules of Chess</a></td></tr><tr><td align="right">20.2&nbsp;</td><td><a href="#%28part._.Visuals_and_.Player_.Interaction%29" class="tocviewlink" data-pltdoc="x">Visuals and Player Interaction</a></td></tr><tr><td align="right">20.3&nbsp;</td><td><a href="#%28part._.Design_hints%29" class="tocviewlink" data-pltdoc="x">Design hints</a></td></tr><tr><td align="right">20.4&nbsp;</td><td><a href="#%28part._.Testing%29" class="tocviewlink" data-pltdoc="x">Testing</a></td></tr><tr><td align="right">20.5&nbsp;</td><td><a href="#%28part._.A.I%29" class="tocviewlink" data-pltdoc="x">AI</a></td></tr></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Chess%29" class="tocsubseclink" data-pltdoc="x">Chess</a></td></tr><tr><td><span class="tocsublinknumber">20.1<tt>&nbsp;</tt></span><a href="#%28part._.The_.Rules_of_.Chess%29" class="tocsubseclink" data-pltdoc="x">The Rules of Chess</a></td></tr><tr><td><span class="tocsublinknumber">20.1.1<tt>&nbsp;</tt></span><a href="#%28part._.Setup%29" class="tocsubseclink" data-pltdoc="x">Setup</a></td></tr><tr><td><span class="tocsublinknumber">20.1.2<tt>&nbsp;</tt></span><a href="#%28part._.Pieces_in_chess%29" class="tocsubseclink" data-pltdoc="x">Pieces in chess</a></td></tr><tr><td><span class="tocsublinknumber">20.1.2.1<tt>&nbsp;</tt></span><a href="#%28part._.Pawns%29" class="tocsubseclink" data-pltdoc="x">Pawns</a></td></tr><tr><td><span class="tocsublinknumber">20.1.2.2<tt>&nbsp;</tt></span><a href="#%28part._.Queens__.Bishops__and_.Rooks%29" class="tocsubseclink" data-pltdoc="x">Queens, Bishops, and Rooks</a></td></tr><tr><td><span class="tocsublinknumber">20.1.2.3<tt>&nbsp;</tt></span><a href="#%28part._.Knights%29" class="tocsubseclink" data-pltdoc="x">Knights</a></td></tr><tr><td><span class="tocsublinknumber">20.1.2.4<tt>&nbsp;</tt></span><a href="#%28part._.Kings%29" class="tocsubseclink" data-pltdoc="x">Kings</a></td></tr><tr><td><span class="tocsublinknumber">20.1.3<tt>&nbsp;</tt></span><a href="#%28part._.Check%29" class="tocsubseclink" data-pltdoc="x">Check</a></td></tr><tr><td><span class="tocsublinknumber">20.1.4<tt>&nbsp;</tt></span><a href="#%28part._.Checkmate%29" class="tocsubseclink" data-pltdoc="x">Checkmate</a></td></tr><tr><td><span class="tocsublinknumber">20.1.5<tt>&nbsp;</tt></span><a href="#%28part._.Special_.Moves%29" class="tocsubseclink" data-pltdoc="x">Special Moves</a></td></tr><tr><td><span class="tocsublinknumber">20.1.5.1<tt>&nbsp;</tt></span><a href="#%28part._.Promotion%29" class="tocsubseclink" data-pltdoc="x">Promotion</a></td></tr><tr><td><span class="tocsublinknumber">20.1.5.2<tt>&nbsp;</tt></span><a href="#%28part._.Castling%29" class="tocsubseclink" data-pltdoc="x">Castling</a></td></tr><tr><td><span class="tocsublinknumber">20.1.5.3<tt>&nbsp;</tt></span><a href="#%28part._.En_.Passant%29" class="tocsubseclink" data-pltdoc="x">En Passant</a></td></tr><tr><td><span class="tocsublinknumber">20.2<tt>&nbsp;</tt></span><a href="#%28part._.Visuals_and_.Player_.Interaction%29" class="tocsubseclink" data-pltdoc="x">Visuals and Player Interaction</a></td></tr><tr><td><span class="tocsublinknumber">20.3<tt>&nbsp;</tt></span><a href="#%28part._.Design_hints%29" class="tocsubseclink" data-pltdoc="x">Design hints</a></td></tr><tr><td><span class="tocsublinknumber">20.3.1<tt>&nbsp;</tt></span><a href="#%28part._.The_game_itself%29" class="tocsubseclink" data-pltdoc="x">The game itself</a></td></tr><tr><td><span class="tocsublinknumber">20.3.2<tt>&nbsp;</tt></span><a href="#%28part._.Players%29" class="tocsubseclink" data-pltdoc="x">Players</a></td></tr><tr><td><span class="tocsublinknumber">20.3.3<tt>&nbsp;</tt></span><a href="#%28part._.The_board%29" class="tocsubseclink" data-pltdoc="x">The board</a></td></tr><tr><td><span class="tocsublinknumber">20.3.4<tt>&nbsp;</tt></span><a href="#%28part._.Pieces%29" class="tocsubseclink" data-pltdoc="x">Pieces</a></td></tr><tr><td><span class="tocsublinknumber">20.3.5<tt>&nbsp;</tt></span><a href="#%28part._.Actions%29" class="tocsubseclink" data-pltdoc="x">Actions</a></td></tr><tr><td><span class="tocsublinknumber">20.3.5.1<tt>&nbsp;</tt></span><a href="#%28part._.Actions_as_.Functions%29" class="tocsubseclink" data-pltdoc="x">Actions as Functions</a></td></tr><tr><td><span class="tocsublinknumber">20.4<tt>&nbsp;</tt></span><a href="#%28part._.Testing%29" class="tocsubseclink" data-pltdoc="x">Testing</a></td></tr><tr><td><span class="tocsublinknumber">20.5<tt>&nbsp;</tt></span><a href="#%28part._.A.I%29" class="tocsubseclink" data-pltdoc="x">AI</a></td></tr><tr><td><span class="tocsublinknumber">20.5.1<tt>&nbsp;</tt></span><a href="#%28part._.Players__but_make_it_cyborg%29" class="tocsubseclink" data-pltdoc="x">Players, but make it cyborg</a></td></tr><tr><td><span class="tocsublinknumber">20.5.1.1<tt>&nbsp;</tt></span><a href="#%28part._on.Tick%29" class="tocsubseclink" data-pltdoc="x">on<span class="mywbr"> &nbsp;</span>Tick</a></td></tr><tr><td><span class="tocsublinknumber">20.5.1.2<tt>&nbsp;</tt></span><a href="#%28part._.A_randumb_.A.I%29" class="tocsubseclink" data-pltdoc="x">A randumb AI</a></td></tr><tr><td><span class="tocsublinknumber">20.5.1.3<tt>&nbsp;</tt></span><a href="#%28part._.A_smart_.A.I%29" class="tocsubseclink" data-pltdoc="x">A smart AI</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><div class="versionbox"><span class="version">8.2</span></div><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="assignment19.html" title="backward to &quot;Assignment 19: Minesweeper&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="Assignments.html" title="up to &quot;Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Documentation.html" title="forward to &quot;Documentation&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div><h4><a name="(part._)"></a><span class="AssignmentNum">Assignment 20:</span> Chess</h4><p><span style="font-weight: bold">Goals:</span> Design a complex game with an AI</p><p>You should submit one <span class="stt">.zip</span> file containing the solution to this problem.</p><p><span style="font-weight: bold"><span style="color: red">Be sure to properly test your code and write purpose statements for your methods.</span></span>
+A lack of tests and documentation will result in a lower grade! Remember that testing requires
+you to make some examples of data in an examples class.</p><p>It is up to you which big-bang library to use, either the function or imperative one.
+Read <a href="Documentation.html" data-pltdoc="x">the documentation</a> carefully for more information.</p><h5><a name="(part._.Chess)"></a>Chess</h5><p>You are going to design a 2-player, 1-player, or 0-player Chess game (with the
+missing player(s) being computer(s)).</p><p>In Chess, there are two players who alternate turns.
+Each controls 16 pieces with various properties
+on an 8x8 grid, with the goal being to defeat the other player by trapping their king,
+a type of piece (more explained below). One player&rsquo;s pieces are white, and the other
+player&rsquo;s pieces are black. The grid is checkered black and white, with the bottom-left
+tile being black.</p><blockquote class="refpara"><blockquote class="refcolumn"><blockquote class="refcontent"><p>As is common terminology, the player who controls the white pieces is just referred to
+as "white" and the player who controls the black pieces is just referred to as "black."
+So when you read something like "white can move their queen forward," that really means
+"the player who controls the white pieces can move their queen forward."</p></blockquote></blockquote></blockquote><p>There are two main actions which drive the game, which is moving your own pieces and
+capturing the other player&rsquo;s pieces. Moving a piece is self-explanatory. Capturing a piece means
+moving your piece onto another player&rsquo;s, which then eliminates that piece. In every turn,
+you can perform one action. Other, special actions will be outlined below.</p><p>Note that one can never move into or through a space their own piece is occupying. A player
+also cannot move past another piece&rsquo;s, it can either capture it or stop short of that other piece&rsquo;s
+position. The one exception to these rules is that a knight can move through other pieces,
+which will be outlined further below.</p><h5>20.1<tt>&nbsp;</tt><a name="(part._.The_.Rules_of_.Chess)"></a>The Rules of Chess</h5><h5>20.1.1<tt>&nbsp;</tt><a name="(part._.Setup)"></a>Setup</h5><p>Every game of chess starts the same way. The bottommost row consists of the following pieces
+in order: rook, knight, bishop, queen, king, bishop, knight, rook. The next row
+consists of eight pawns. In the 3-d version, each player has this in front of them. In a 2-d
+version, which gives the top-down perspective of the board, it looks like this:
+<img src="setup.png" alt="" width="512" height="534"/></p><p>From there, players alternate moving their pieces, with white moving first. Every piece
+has unique movement properties.</p><h5>20.1.2<tt>&nbsp;</tt><a name="(part._.Pieces_in_chess)"></a>Pieces in chess</h5><h5>20.1.2.1<tt>&nbsp;</tt><a name="(part._.Pawns)"></a>Pawns</h5><p><img src="whitePawn.png" alt="" width="30" height="30"/><img src="blackPawn.png" alt="" width="30" height="30"/></p><p><span style="font-weight: bold">Movement</span></p><p>Pawns can only move in one direction: forward. Most of the time, pawns can only move
+forward one space, as pictured below.
+<img src="pawn-mid.png" alt="" width="512" height="534"/></p><p>However, when pawns are on their starting line, they may move either one or two spaces forward.
+After they leave the starting line, they can only move one space.
+<img src="pawn-start.png" alt="" width="512" height="534"/></p><p><span style="font-weight: bold">Capturing</span></p><p>Pawns are unique in that they are the <span class="emph">only</span> pieces in the game that have
+different rules for how they can move and how they can capture. Pawns cannot
+capture pieces directly in front of them. However, they can capture pieces
+directly in front of and to the left or right of them. For example, notice
+how in the following picture, the pawn does not have the option to capture
+the piece in front of it, but does have the option to capture the piece
+to its immediate forward diagonal.
+<img src="pawn-capture1.png" alt="" width="512" height="534"/></p><p>In another example, this pawn can capture diagonally or move forward without
+capturing.
+<img src="pawn-capture2.png" alt="" width="512" height="534"/></p><p>Here is what the game would look like if it did choose to capture that piece.
+Remember, capturing an enemy&rsquo;s piece means moving yours into the space that the
+other piece occupied, clearing it from the board.
+<img src="pawn-post-capture.png" alt="" width="512" height="534"/></p><h5>20.1.2.2<tt>&nbsp;</tt><a name="(part._.Queens__.Bishops__and_.Rooks)"></a>Queens, Bishops, and Rooks</h5><p><span style="font-weight: bold">Queens</span></p><p><img src="whiteQueen.png" alt="" width="30" height="30"/><img src="blackQueen.png" alt="" width="30" height="30"/></p><p><span style="font-weight: bold">Bishops</span></p><p><img src="whiteBishop.png" alt="" width="30" height="30"/><img src="blackBishop.png" alt="" width="30" height="30"/></p><p><span style="font-weight: bold">Rooks</span></p><p><img src="whiteRook.png" alt="" width="30" height="30"/><img src="blackRook.png" alt="" width="30" height="30"/></p><p>Queens, bishops, and rooks all have similar movement and capture rules. Queens can move
+in all 8 directions, bishops can move along either diagonal in either direction, and
+rooks can move forwards and backwards or side to side. Note that the queen&rsquo;s
+flexibility makes her the single most valuable piece in the game.</p><p>Some examples of possible actions are given below:</p><p><img src="queen.png" alt="" width="512" height="534"/>
+<img src="bishop.png" alt="" width="512" height="534"/>
+<img src="rook.png" alt="" width="512" height="534"/></p><h5>20.1.2.3<tt>&nbsp;</tt><a name="(part._.Knights)"></a>Knights</h5><p><img src="whiteKnight.png" alt="" width="30" height="30"/><img src="blackKnight.png" alt="" width="30" height="30"/></p><p>Knights have unique move rules. You can think of them as moving in an "L" shape:
+two up or down, then one to the left or right, or two left or right, then one up or down.</p><p>While knights cannot land on tiles if that tile already occupies a piece of their own
+color, they can make their "L" move or capture even if other pieces are "in the way."
+In other words, you can think of knights as pieces that "teleport," as opposed to moving
+across the board, like pawns (from their starting row), queens, bishops, and rooks do.</p><p><img src="knight.png" alt="" width="512" height="534"/></p><h5>20.1.2.4<tt>&nbsp;</tt><a name="(part._.Kings)"></a>Kings</h5><p><img src="whiteKing.png" alt="" width="30" height="30"/><img src="blackKing.png" alt="" width="30" height="30"/></p><p>Kings can move in all eight directions much like queens can, however,
+the king can only move one space.</p><p><img src="king.png" alt="" width="512" height="534"/></p><p>Note, however, that kings cannot move into a position that would endanger
+them.</p><p><img src="king2.png" alt="" width="512" height="534"/></p><p>A king being in danger is called...</p><h5>20.1.3<tt>&nbsp;</tt><a name="(part._.Check)"></a>Check</h5><p>When a king is in danger, that is, is in a position where it could be
+diretly captured by an enemy&rsquo;s piece, that king is "in check." For example,
+black is in check here:</p><p><img src="check-start.png" alt="" width="512" height="534"/></p><p>When in check, a player may not make any move unless it would get them out of check.
+For example, black&rsquo;s pawns cannot make any moves right now:</p><p><img src="check-no-move.png" alt="" width="512" height="534"/></p><p>Additionally, the queen is only allowed to make the following move, because moving
+diagonally would not get the player out of check.</p><p><img src="check-1-move.png" alt="" width="512" height="534"/></p><p>Note that there are three ways to get out of check: moving the king to a safe position,
+eliminating the piece it is threatened by, or by blocking the threatening piece&rsquo;s
+line of attack (this last possibility only applies when the king is threatened by a
+queen, bishop, or rook from a distance).</p><p>It is illegal for a player to put themselves in check. Here, white cannot move the king
+forward, as it would put white in check:</p><p><img src="put-in-check.png" alt="" width="512" height="534"/></p><h5>20.1.4<tt>&nbsp;</tt><a name="(part._.Checkmate)"></a>Checkmate</h5><blockquote class="refpara"><blockquote class="refcolumn"><blockquote class="refcontent"><p>"White is about to be in checkmate"
+is the same as saying "black is about to checkmate white." In other words,
+it is used as both a noun and a verb.</p></blockquote></blockquote></blockquote><p>The game is over when one player checkmates another. A player is in checkmate when
+they are in check and no move can get them out of check. Here, white is in checkmate
+and has just lost the game:</p><p><img src="mate.png" alt="" width="512" height="534"/></p><h5>20.1.5<tt>&nbsp;</tt><a name="(part._.Special_.Moves)"></a>Special Moves</h5><h5>20.1.5.1<tt>&nbsp;</tt><a name="(part._.Promotion)"></a>Promotion</h5><p>If a pawn manages to make it all the way across the board to the other player&rsquo;s
+starting backline, it is then "promoted," or in other words, swapped out for a better
+piece. For example, below is a pawn which is about to move to the opposite end
+and be promoted to a queen:</p><p><img src="promo-1.png" alt="" width="512" height="534"/>
+<img src="promo-2.png" alt="" width="512" height="534"/></p><p>This can also happen when a pawn captures a piece in the last row:</p><p><img src="promo-3.png" alt="" width="512" height="534"/>
+<img src="promo-4.png" alt="" width="512" height="534"/></p><p>Technically speaking, in formal chess, players can promote a pawn to a
+knight, bishop, rook, or queen, but promoting to anything but a queen
+is almost never done. As such, you don&rsquo;t have to allow for this scenario.</p><h5>20.1.5.2<tt>&nbsp;</tt><a name="(part._.Castling)"></a>Castling</h5><p>Under very specific conditions, a player can "castle." It is the only
+move in chess where a player moves two of their own pieces. In a castle,
+the king moves over two spaces to either the left or right, and the rook
+in that direction is placed one position behind the king in the opposite
+direction. Below are two examples of a castle (the former is called a
+queenside castle, the latter a kingside castle).</p><p><img src="castle-1.png" alt="" width="512" height="534"/>
+<img src="castle-2.png" alt="" width="512" height="534"/>
+<img src="castle-3.png" alt="" width="512" height="534"/>
+<img src="castle-4.png" alt="" width="512" height="534"/></p><p><div class="SIntrapara">Castling can only happen when <span class="emph">all</span> of the following conditions
+are met:
+</div><div class="SIntrapara"><ul><li><p>The player&rsquo;s king has never moved.</p></li><li><p>The rook involved in the castling has never moved.</p></li><li><p>There are no pieces in between the king and the rook.</p></li><li><p>The spaces the king moves through are not under threat from an enemy piece.</p></li><li><p>The player is not in check.</p></li></ul></div></p><p>Note that the last rule means a player cannot use a castle to get out of check.</p><h5>20.1.5.3<tt>&nbsp;</tt><a name="(part._.En_.Passant)"></a>En Passant</h5><p>En passant, which is French for "in passing," is the last kind of special move
+in chess and can only happen under extremely specific conditions. Say that black&rsquo;s
+pawn has <span class="emph">just</span> moved two spaces off its starting row:</p><p><img src="passant-1.png" alt="" width="512" height="534"/>
+<img src="passant-2.png" alt="" width="512" height="534"/></p><p>And white happens to have a pawn adjacent to black&rsquo;s just-moved pawn. It can then
+move to the diagonal to capture the pawn adjacent to it:
+<img src="passant-3.png" alt="" width="512" height="534"/>
+<img src="passant-4.png" alt="" width="512" height="534"/></p><p>Note that this can happen only with pawns and only <span class="emph">immediately</span>
+after the pawn being captured has moved two spaces off its starting row. After
+that turn, one can no longer perform an en passant.</p><h5>20.2<tt>&nbsp;</tt><a name="(part._.Visuals_and_.Player_.Interaction)"></a>Visuals and Player Interaction</h5><p><div class="SIntrapara"><div class="RelatedFiles"><blockquote><p class="boxed">Related files:<br/><span class="hspace">&nbsp;&nbsp;</span><a href="files/assignments/R-chess/files/assignments/R-chess/pieces.zip">pieces.zip</a><span class="hspace">&nbsp;&nbsp;</span> </p></blockquote></div></div><div class="SIntrapara">Hopefully, the visual components of the game are clear by now, as there are an
+abundance of examples above. You can download images of every piece in the linked
+zip folder. Look at the docs for the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">FromFileImage</span><span class="RktMeta"></span></span></span> class to use an image
+contained in a file.</div></p><p>Player interaction is fairly simple. If it is white&rsquo;s turn, for example, clicking
+on anything but a white piece should do nothing.
+If the player clicks on a white piece, that piece should be somehow highlighted
+(in my implementation, with a green circle), and all of the possible moves
+it can make should be shown (in my implementation, with a purple circle).</p><p>Once the possible moves are shown, clicking anywhere other than a possible move
+should do nothing. If a player clicks on one of the possible moves, the move should
+happen and it should then be the other player&rsquo;s turn (unless checkmate has been accomplished
+and the game is over).</p><p>Should a player click on a piece but then change their mind before they move,
+they should press the escape button on their keyboard to de-select the piece. Once a player moves,
+it cannot be taken back.</p><h5>20.3<tt>&nbsp;</tt><a name="(part._.Design_hints)"></a>Design hints</h5><p>While the visual components and player interactions are fairly simple, the logic
+involved in programming a chess game means this will be by far the most complex
+program you have ever written for CS1 or CS2. As such, extreme care is needed
+in designing the game.</p><p>Major components of the game to keep in mind will shortly, follow,
+but as a general rule, <span style="font-weight: bold">you should make a new file for each class.</span> This
+is industry-standard practice, and will keep your file sizes mangeable. For reference,
+my implementation is around 1500 lines, and you do <span class="emph">not</span> want to deal
+with files of code that are 1500 lines long.</p><p>The major components of this game are: the game itself (your class which extends <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">World</span><span class="RktMeta"></span></span></span>),
+the players, the board, which consists of pieces, and the actions players can take. Each of these
+are discussed below.</p><h5>20.3.1<tt>&nbsp;</tt><a name="(part._.The_game_itself)"></a>The game itself</h5><p>The game class itself should be relatively simple, as the heavy lifting should be delegated
+to other classes. You may even consider writing another class that is solely responsible for
+drawing the game!</p><p>The game itself has to have at least two players (the player whose turn it currently is
+and the other player), the current state of the board, and which piece (if any) is currently
+selected.</p><h5>20.3.2<tt>&nbsp;</tt><a name="(part._.Players)"></a>Players</h5><p>For now, players should just have a name and color. This will become more complex once
+we introduce AI&rsquo;s into the game.</p><h5>20.3.3<tt>&nbsp;</tt><a name="(part._.The_board)"></a>The board</h5><p>The board should contain every piece and its position. Since the board knows about
+every piece, this class is a good place for methods like "would this move put a
+player in check?"</p><h5>20.3.4<tt>&nbsp;</tt><a name="(part._.Pieces)"></a>Pieces</h5><p>Pieces and their moves are the heart of the game. All pieces have a color and position,
+and must be able to produce a list of the actions they can make given the current
+state of the game (more on actions below).</p><p>You should certainly have an abstract <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Piece</span><span class="RktMeta"></span></span></span> class which contains all of the common
+behavior between classes, as well as a class for each kind of piece,
+but there are also subcategories of pieces which share common functionality. As such,
+a hierarchy of piece classes is appropriate. While some of these overlaps are obvious,
+some are less so (a King&rsquo;s movement and Knight&rsquo;s movement actually operate very similarly).</p><h5>20.3.5<tt>&nbsp;</tt><a name="(part._.Actions)"></a>Actions</h5><p>As outlined above, there are five types of actions in a chess game: moving, capturing,
+promotions, castling, and en passant. As capturing and promotions can happen at the same time,
+you might also consider that a separate, sixth type of action. Given this, you should
+definitely have an <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Action</span><span class="RktMeta"></span></span></span> interface or abstract class, and one class for each type of move.</p><p>Every piece, given the current state of the board, should be able to produce a list of the
+actions it can take. I recommend making an abstract method along the lines of
+<span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjKeyword">abstract</span><span class="ProfjWhiteSpace"> </span><span class="ProfjType">List</span><span class="ProfjKeyword">&lt;</span><span class="ProfjType">Capture</span><span class="ProfjKeyword">&gt;</span><span class="ProfjWhiteSpace"> </span><span class="ProfjIdentifier">getCaptures</span><span class="ProfjKeyword">(</span><span class="ProfjType">Board</span><span class="ProfjWhiteSpace"> </span><span class="ProfjIdentifier">currentState</span><span class="ProfjKeyword">)</span><span class="RktMeta"></span></span></span> in the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Piece</span><span class="RktMeta"></span></span></span> class,
+which will return all of the captures a given piece can make given the current state
+of the board, as well as an equivalent method for all other types of moves. Then, all of
+the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Piece</span><span class="RktMeta"></span></span></span>&rsquo;s moves can be compiled into one large list in the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Piece</span><span class="RktMeta"></span></span></span> class
+itself.</p><h5>20.3.5.1<tt>&nbsp;</tt><a name="(part._.Actions_as_.Functions)"></a>Actions as Functions</h5><p>An action can effectively be considered a function on a board. Given the current state,
+what state would be produced if this action were taken? While an action doesn&rsquo;t necessarily
+have to implement the function interface, being able to use it as one will make your life much
+easier.</p><p><span style="font-weight: bold"><span style="color: red">I strongly recommend making your board changes functional.</span></span> That is, producing
+a new board should not modify the current board at all. While this will be very important
+once we incorporate AI, even without AI, it will
+enabling logic along the lines of "would this move put the player in check" much more straightforward.</p><h5>20.4<tt>&nbsp;</tt><a name="(part._.Testing)"></a>Testing</h5><p>If your game ever behaves unexpectedly, in such a large program, it is going to be very
+diffiuclt to figure out exactly why by just looking at the code. As such,
+being able to test the logic of your game is going to be very important. I recommend
+using the builder pattern (which we will discuss in class) to be able to
+quickly build scenarios that test the basic logic of all your pieces&rsquo; actions. By "scenario,"
+I mean a board populated with only a few pieces that lets you focus on exactly the scenario
+you want to test.</p><h5>20.5<tt>&nbsp;</tt><a name="(part._.A.I)"></a>AI</h5><p>After completing a human-vs-human implementation of chess (huzzah!), it is time to
+create human-vs-computer, computer-vs-human, and even computer-vs-computer
+implementations of chess.
+To do this, the first things that must change are...</p><h5>20.5.1<tt>&nbsp;</tt><a name="(part._.Players__but_make_it_cyborg)"></a>Players, but make it cyborg</h5><p>A player must now have more than just a name or color, and because very different
+kinds of behavior must be supported by the same player fields in your world class,
+you should now make <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Player</span><span class="RktMeta"></span></span></span> an interface, with both human and non-human
+implementing classes. To launch a different kind of game, one should only
+have to pass in different kinds of <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">Player</span><span class="RktMeta"></span></span></span>s to your game&rsquo;s constructor.
+You should still have a blank constructor, which by default launches a
+human-vs-computer game.</p><p>As computer-controlled players must now be able to move automatically, you can
+add a <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjPrimType">boolean</span><span class="ProfjWhiteSpace"> </span><span class="ProfjIdentifier">canMoveAutomatically</span><span class="ProfjKeyword">(</span><span class="ProfjKeyword">)</span><span class="RktMeta"></span></span></span> method to your interface, and another
+method which, given the current board state, produces a desired action. For
+human-controlled players, you can throw an <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">UnsupportedOperationException</span><span class="RktMeta"></span></span></span>
+in the latter method. Alternatively, you can add one method to your interface
+which returns an optional action, with humans returning an empty optional.</p><h5>20.5.1.1<tt>&nbsp;</tt><a name="(part._on.Tick)"></a>onTick</h5><p>To enable some players to move automatically, you should add an <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">onTick</span><span class="RktMeta"></span></span></span> method
+to your <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjType">World</span><span class="RktMeta"></span></span></span>. Computer-controlled players will make their moves from within
+the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">onTick</span><span class="RktMeta"></span></span></span> method. Remember to pass in a
+non-zero tick-rate to <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">bigBang</span><span class="RktMeta"></span></span></span> so the <span class="RktBlk"><span class="JavaHighlight"><span class="RktMeta"></span><span class="ProfjIdentifier">onTick</span><span class="RktMeta"></span></span></span> method is called.
+Also, keep in mind that automatically
+does not mean quickly; some AIs will take longer to move than others.</p><h5>20.5.1.2<tt>&nbsp;</tt><a name="(part._.A_randumb_.A.I)"></a>A randumb AI</h5><p>Before implementing a smart AI, you should implement a randumb AI to determine if
+your infrastructure for human-vs-computer, computer-vs-human, and computer-vs-computer
+games are functional. A randumb AI is an AI which randomly selects an action from
+all possible actions.</p><h5>20.5.1.3<tt>&nbsp;</tt><a name="(part._.A_smart_.A.I)"></a>A smart AI</h5><p>More on this soon...</p><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="assignment19.html" title="backward to &quot;Assignment 19: Minesweeper&quot;" data-pltdoc="x">&larr; prev</a>&nbsp;&nbsp;<a href="Assignments.html" title="up to &quot;Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="Documentation.html" title="forward to &quot;Documentation&quot;" data-pltdoc="x">next &rarr;</a></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>
